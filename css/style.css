@@ -55,19 +55,33 @@ p {
 .section {
   margin: 0 auto;
   background-color: #76926A;
-  background-image: url("../img/white_line.svg");
   background-repeat: no-repeat;
-  background-position-y: 35%;
   background-position-x: center;
-  background-size: 100%;
-  padding: 17px 0 0 0;
   position: relative;
 }
-.section::after {
-  content: url("../img/img.svg");
+.section:first-of-type {
+  background-image: url("../img/white-line.svg");
+  background-size: 100%;
+  padding: 17px 0 0 0;
+  background-position-y: 45%;
+}
+.section:first-of-type::before {
+  content: url("../img/left-item.svg");
+  position: absolute;
+  left: 0;
+  top: 65%;
+}
+.section:first-of-type::after {
+  content: url("../img/right-item.svg");
   position: absolute;
   right: 0;
-  top: 20%;
+  top: 6%;
+}
+.section:nth-of-type(2)::after {
+  content: url("../img/right-item-practice.svg");
+  position: absolute;
+  right: 0;
+  top: 12%;
 }
 
 .container {
@@ -79,10 +93,12 @@ p {
 
 .title {
   font-family: "Montserrat";
-  padding: 22px 19px 17px 19px;
   font-size: 23px;
   line-height: 30px;
   font-weight: 700;
+}
+.title--intro {
+  padding: 22px 19px 17px 19px;
 }
 .title--white {
   color: #ffffff;
@@ -137,14 +153,30 @@ p {
 .text {
   font-family: "Montserrat";
   font-size: 16px;
-  line-height: 30px;
+  line-height: 26px;
   font-weight: 500;
 }
 .text__block {
-  padding: 0 15px;
+  padding: 0 15px 30px 15px;
+  position: relative;
+}
+.text__block::after {
+  content: url("../img/right-item.svg");
+  position: absolute;
+  right: -15px;
+  top: 75%;
+}
+.text--white {
+  color: #ffffff;
+}
+.text--practic {
+  margin-bottom: 35px;
 }
 .text--italic {
   font-style: italic;
+}
+.text--green {
+  color: #76926A;
 }
 .text--bold {
   font-weight: 700;
@@ -210,9 +242,67 @@ p {
 .text--margintop {
   margin-top: 20px;
 }
+.text--footer {
+  color: #ffffff;
+  width: 202px;
+  line-height: 20px;
+}
+.text--quote {
+  width: 141px;
+  color: #ffffff;
+  padding: 13px 0 22px 0;
+  line-height: 20px;
+}
+.text--w {
+  display: flex;
+  align-items: center;
+}
+.text--w::after {
+  content: "";
+  background-image: url("../img/w-item.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex: 0 0 auto;
+  width: 32.55px;
+  height: 10.93px;
+  margin-left: auto;
+}
 
 .reasons {
   margin-top: 20px;
+}
+
+.practic {
+  background: #EEEEED;
+  padding: 30px 30px 100px 15px;
+  position: relative;
+}
+.practic__inner {
+  margin-top: 10px;
+}
+.practic__img {
+  display: block;
+  width: 202px;
+  height: 119px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.images {
+  background-color: #ffffff;
+}
+.images__inner--item {
+  border-top: 1px #76926A solid;
+  padding: 20px 0;
+}
+.images__img {
+  display: block;
+  width: 100%;
+}
+.images__bottom {
+  padding: 27px 15px 34px 15px;
 }
 
 .button {
@@ -269,66 +359,30 @@ p {
   outline: none;
 }
 
-.bottom__block {
-  position: relative;
-  display: flex;
-  padding-bottom: 188px;
-}
-
-.dark {
-  position: relative;
-  z-index: 0;
-  background-color: #252B31;
-  padding: 24px 20px 0 20px;
-}
-
 .footer {
-  background-color: #B9DDE7;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-x: center;
-  background-position-y: center;
+  background-color: #76926A;
+  padding: 30px 0 20px 0;
+  position: relative;
 }
 .footer__img {
   display: block;
-  width: 204px;
-  height: 278px;
+  width: 171px;
+  height: 226px;
   position: absolute;
-  right: -35px;
-  top: auto;
   bottom: 0;
-  z-index: 10;
-}
-.footer__img--dots {
-  position: absolute;
-  top: 125px;
+  right: -15px;
 }
 .footer__link {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-.footer__link--img {
-  display: block;
-  width: 20px;
-  height: 20px;
-}
-.footer__link--img svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.footer__link--link {
-  padding-left: 8px;
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
   line-height: 20px;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  color: #ffffff;
+  color: #EDFFC7;
 }
-.footer__link--link:hover {
-  opacity: 0.7;
+.footer__link:hover {
+  color: #ffffff;
   transition: 0.2s linear;
 }

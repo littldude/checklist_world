@@ -274,8 +274,11 @@ p {
 
 .footer {
   background-color: #76926A;
-  padding: 30px 0 20px 0;
+  padding: 30px 15px 20px 15px;
   position: relative;
+  border-bottom: 1px #ffffff solid;
+  border-left: 1px #ffffff solid;
+  border-right: 1px #ffffff solid;
 }
 .footer__img {
   display: block;
@@ -283,7 +286,7 @@ p {
   height: 226px;
   position: absolute;
   bottom: 0;
-  right: -15px;
+  right: 0;
 }
 .footer__link {
   font-family: "Montserrat";
@@ -313,6 +316,14 @@ p {
     position: absolute;
     right: -15px;
     top: 75%;
+  }
+
+  .footer {
+    border: none;
+    padding: 30px 0 20px 0;
+  }
+  .footer__img {
+    right: -15px;
   }
 }
 @media (max-width: 375px) {

@@ -159,20 +159,19 @@ p {
   padding-right: 16px;
 }
 .text--triangles {
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 .text--triangles::after {
   content: "";
   background-image: url("../img/green-triangles.svg");
   background-repeat: no-repeat;
   background-size: 100%;
-  position: absolute;
-  bottom: 7px;
-  right: 130px;
   display: flex;
   flex: 0 0 auto;
   width: 37px;
   height: 15px;
+  margin-left: 10px;
 }
 .text--why {
   margin-top: 40px;

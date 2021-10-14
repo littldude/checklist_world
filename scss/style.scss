@@ -154,19 +154,18 @@ p {
         padding-right: 16px;
     }
     &--triangles {
-        position: relative;
+        display: flex;
+        align-items: center;
         &::after {
             content: '';
             background-image: url('../img/green-triangles.svg');
             background-repeat: no-repeat;
             background-size: 100%;
-            position: absolute;
-            bottom: 7px;
-            right: 130px;
             display: flex;
             flex: 0 0 auto;
             width: 37px;
             height: 15px;
+            margin-left: 10px;
         }
     }
     &--why {
@@ -240,7 +239,6 @@ p {
 }
 .reasons {
     margin-top: 20px;
-    
 }
 .practic {
     background: #EEEEED;
